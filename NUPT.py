@@ -29,7 +29,7 @@ with st.sidebar:
 if submit_button:  
     try:  
         # Load the saved model from the file  
-        with open(r'C:\Users\77434\Desktop\wzh\RF_UPT\RF.pkl', 'rb') as f:
+        with open(r'./RF.pkl', 'rb') as f:
             clf = pickle.load(f)  
 
         # Store inputs into dataframe  
@@ -44,8 +44,8 @@ if submit_button:
 
         # 实例化 StandardScaler  
                 # Load the complete dataset for SHAP analysis  
-        BT_complete = pd.read_csv(r'C:\Users\77434\Desktop\wzh\RF_UPT\BF_complete.csv')
-        BT= pd.read_csv(r'C:\Users\77434\Desktop\wzh\RF_UPT\UPT_BF.csv')
+        BT_complete = pd.read_csv(r'./BF_complete.csv')
+        BT= pd.read_csv(r'./UPT_BF.csv')
         c = BT_complete[['Age', 'length_of_glans_', 'width_of_glans',  'UP_width',
                          'preoperative_curvature', 'length_of_dificient_urethra']]  
         b=BT[['Age', 'length_of_glans_', 'width_of_glans',  'UP_width',
